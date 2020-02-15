@@ -1,0 +1,83 @@
+/*!
+ * Jady's main stylesheet
+ */
+
+::selection{text-shadow:none;color:#FFF;background-color:#E03859;}
+::-moz-selection{text-shadow:none;color:#FFF;background:#E03859;}
+::-webkit-selection{text-shadow:none;color:#FFF;background:#E03859;}
+
+a, a .active, a:active, a:focus, a:hover {
+    color: #FFF !important;
+    text-decoration: none;
+}
+div.intro-text {
+	padding-top: 100px !important;
+	color: #FFF;
+}
+footer {
+	padding: 45px 0px;
+}
+.intro-heading {
+	color: #292B2C !important;
+	padding-top: 50px;
+	padding-bottom: 20px;
+	line-height: 1em !important;
+	
+}
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+.btn-xl {
+	border: 4px solid #E03859 !important;
+}
+#btn-about .active, #btn-about:active, #btn-about:focus, #btn-about:hover {
+    background-color: #AF2348 !important;
+    border-color: #E03859 !important;
+}
+#btn-lattes {
+	background-color: #FFF;
+	border-color: #292B2C !important;
+	color: #292B2C !important;
+	margin-top: 30px !important;
+}
+#btn-lattes .active, #btn-lattes:active, #btn-lattes:focus, #btn-lattes:hover {
+    background-color: #E03859 !important;
+    border-color: #E03859 !important;
+    color: #FFF !important;
+}
+.email {
+	color: #636c72 !important;
+	text-decoration: underline;
+}
+.email .active, .email:active, .email:focus, .email:hover {
+	color: #636c72 !important;
+	text-decoration: none;
+}
+.timeline-image {
+    border: 7px solid #292B2C !important;
+    background-color: #292B2C !important;
+    color: #FFF !important;
+}
+.timeline:before {
+    background-color: #292B2C;
+    width: 4px;
+}
+.timeline .final {
+	border: 7px solid #AF2348 !important;
+	background-color: #E03859 !important;
+}
+.section-subheading {
+	font-size: 1.1em !important;
+	font-style: normal !important;
+	font-family:'Raleway','Helvetica Neue',Helvetica,Arial,sans-serif !important;
+}
+#about {
+	background: #F1EADB url("../img/team-bg.png") repeat;
+	padding-bottom: 45px;
+}
+#team {
+	background-color: #FFF;
+}
