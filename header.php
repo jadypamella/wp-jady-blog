@@ -6,53 +6,50 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Jady_-_Portfólio
+ * @package WordPress
+ * @subpackage Jady_Twenty_Seventeen
+ * @since 1.0
+ * @version 1.0
  */
+?><!DOCTYPE html>
+<html lang="pt-br">
 
-?>
-<!doctype html>
-<html <?php language_attributes(); ?>>
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="https://gmpg.org/xfn/11">
 
-	<?php wp_head(); ?>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Jady Pâmella">
+    <meta name="description" content="Espaço pessoal da Jady, analista de TI e pesquisadora que gosta de artes marciais e música. Infelizmente, não faz mais websites freelancer.">
+    <meta name="keywords" content="tecnologia, web, designer, analista de TI, brasília, df, brasil">
+
+    <title>Jady Pâmella</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles -->
+    <?php wp_head(); ?>
+
 </head>
 
-<body <?php body_class(); ?>>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'jady-portfolio' ); ?></a>
+<body id="page-top">
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$jady_portfolio_description = get_bloginfo( 'description', 'display' );
-			if ( $jady_portfolio_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $jady_portfolio_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'jady-portfolio' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
-
-	<div id="content" class="site-content">
+  <!-- Header -->
+  <header class="masthead">
+      <div class="container">
+        <div class="row intro-text">
+            <div class="col-md-6 offset-md-3 text-center">
+              <p class="animated bounceInDown"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/logo.png" width="450" height="450" class="img-responsive"></p>
+            </div>
+      <div class="col-md-8 offset-md-2 text-center">
+                <div class="intro-heading">Bem-vindo ao meu espaço</div>
+                <a href="#team" id="btn-about" class="btn btn-xl">Diga Mais</a>
+            </div>
+        </div>
+      </div>
+  </header>

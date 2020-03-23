@@ -6,31 +6,46 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Jady_-_Portfólio
+ * @package WordPress
+ * @subpackage Jady_Twenty_Seventeen
+ * @since 1.0
+ * @version 1.2
  */
-
 ?>
 
-	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'jady-portfolio' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'jady-portfolio' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'jady-portfolio' ), 'jady-portfolio', '<a href="http://www.jadypamella.com.br">Jady Pâmella</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+                <ul class="list-inline social-buttons">
+                    <li class="list-inline-item">
+                        <a href="<?php echo get_contacts('instagram_url'); ?>" title="<?php echo get_contacts('instagram_title'); ?>" target="_blank"><i class="fa <?php echo get_contacts('instagram_icon'); ?>"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="<?php echo get_contacts('facebook_url'); ?>" title="<?php echo get_contacts('facebook_title'); ?>" target="_blank"><i class="fa <?php echo get_contacts('facebook_icon'); ?>"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="<?php echo get_contacts('linkedin_url'); ?>" title="<?php echo get_contacts('linkedin_title'); ?>" target="_blank"><i class="fa <?php echo get_contacts('linkedin_icon'); ?>"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+            </div>
+        </div>
+    </div>
+</footer>
 
+<!-- JavaScript -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 <?php wp_footer(); ?>
 
 </body>
+
 </html>
