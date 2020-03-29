@@ -1,34 +1,77 @@
 /*!
  * Jady's main stylesheet
+ * Cores:
+ * Bege: #F1EADB
+ * Branco: #FFF
+ * Rosa: #E03859
+ * Rosa Claro: #EE76AD
+ * Rosa Escuro: #AF2348
+ * Preto: #292B2C
  */
+
+body, html {
+   height: 100%;
+   margin: 0;
+   background-color: #FFF;
+}
 
 ::selection{text-shadow:none;color:#FFF;background-color:#E03859;}
 ::-moz-selection{text-shadow:none;color:#FFF;background:#E03859;}
 ::-webkit-selection{text-shadow:none;color:#FFF;background:#E03859;}
 
+.bg-image-parallax {
+ position: relative;
+ background-attachment: fixed;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+.bg-image-header {
+ background-image: url("../images/header-bg.jpg");
+ min-height: 100%;
+}
+header {
+ padding: 50px 0 100px;
+}
+section {
+ padding: 100px 0;
+}
 a, a .active, a:active, a:focus, a:hover {
     color: #FFF !important;
     text-decoration: none;
 }
 div.intro-text {
-	padding-top: 100px !important;
+	padding-top: 30px !important;
 	color: #FFF;
 }
+p a {
+	color: #E03859 !important;
+}
+p a:hover {
+	color: #E03859 !important;
+	text-decoration: underline;
+}
 footer {
-	padding: 45px 0px;
+	padding-top: 50px;
+  padding-bottom: 0px;
 }
 .intro-heading {
 	color: #292B2C !important;
-	padding-top: 50px;
+	padding-top: 30px;
 	padding-bottom: 20px;
-	line-height: 1em !important;
-	
+  font-size: 3em;
 }
 .img-responsive {
     display: block;
     max-width: 100%;
     width: 100%;
     height: auto;
+}
+.text-danger{
+  color: #E03859;
+}
+.bg-warning {
+  background-color: #FF5500 !important;
 }
 .btn-xl {
 	border: 4px solid #E03859 !important;
@@ -74,10 +117,60 @@ footer {
 	font-style: normal !important;
 	font-family:'Raleway','Helvetica Neue',Helvetica,Arial,sans-serif !important;
 }
-#about {
-	background: #F1EADB url("../img/team-bg.png") repeat;
+.social .rounded-circle {
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  background-color: #E03859;
+}
+.social .rounded-circle:hover {
+  opacity: 0.9;
+}
+.social .rounded-circle i {
+  font-size: 3.1em;
+  color: #FFF;
+  height: 100%;
+  width: 100%;
+  line-height: 100%;
+  vertical-align: middle;
+  margin-top: 25% !important;
+}
+.social h4 {
+  padding-top: 10px;
+  text-transform: none;
+}
+.social a {
+  color: #292B2C !important;
+}
+.social a h4:hover {
+  text-decoration: underline;
+}
+
+#contato {
+	background: #F1EADB url("../images/team-bg.png") repeat;
 	padding-bottom: 45px;
 }
-#team {
+#sobre {
 	background-color: #FFF;
+}
+
+
+/* Tooltip
+.tooltip > .tooltip-inner {
+  background-color: #E03859 !important;
+  opacity: 1;
+  border: 1px solid #000;
+}
+.tooltip.bottom > .tooltip-arrow {
+  border-bottom-color:#E03859 !important;
+}*/
+
+/*!
+ * Styles for tablets and phones
+ */
+@media only screen and (max-device-width: 1024px) {
+  /* Turn off parallax scrolling for tablets and phones */
+  .bg-image-parallax {
+    background-attachment: scroll;
+  }
 }

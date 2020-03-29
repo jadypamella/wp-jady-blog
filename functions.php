@@ -651,13 +651,15 @@ function add_theme_scripts() {
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
 
 	/* CSS */
-	//wp_enqueue_style( 'css-quicksand', 'https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
-	wp_enqueue_style( 'css-agency', get_template_directory_uri() . '/assets/css/agency.css');
-	wp_enqueue_style( 'css-animate', get_template_directory_uri() . '/assets/css/animate.css');
-	wp_enqueue_style( 'css-main', get_template_directory_uri() . '/assets/css/main.css');-
+	wp_enqueue_style( 'css-bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css');
+	wp_enqueue_style( 'css-portfolio', get_template_directory_uri() . '/assets/css/portfolio.css');
+	wp_enqueue_style( 'css-main', get_template_directory_uri() . '/assets/css/main.css');
 
 	/* JS */
-	wp_enqueue_script( 'js-agency', get_template_directory_uri() . '/assets/js/agency.js', array (), 1.1, true);
+	wp_enqueue_script( 'js-jquery', get_template_directory_uri() . '/assets/js/jquery.min.js', array (), 1.1, true);
+	wp_enqueue_script( 'js-bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array (), 1.1, true);
+	wp_enqueue_script( 'js-easing', get_template_directory_uri() . '/assets/js/jquery.easing.min.js', array (), 1.1, true);
+	wp_enqueue_script( 'js-main', get_template_directory_uri() . '/assets/js/main.js', array (), 1.1, true);
 
 }
 add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
@@ -714,6 +716,11 @@ add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
 				'lattes_title'				=> 'Currículo Lattes',
 				'lattes_description'	=> 'Currículo Lattes',
 				'lattes_icon'		 			=> 'fa-envelope',
+
+				'twitter_url'					=> 'https://www.twitter.com/jadypamella/',
+				'twitter_title'				=> 'Twitter',
+				'twitter_description'	=> 'Twitter',
+				'twitter_icon'		 		=> 'fa-twitter',
       );
 
 			return $contacts[$value];
@@ -735,5 +742,7 @@ add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
 
 	  gtag('config', 'UA-30690938-1');
 	</script>
+	<!-- Pinterest -->
+	<meta name="p:domain_verify" content="351ab534834e779874785b29e589333c"/>
 	<?php
 	}
